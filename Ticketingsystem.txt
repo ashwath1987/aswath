@@ -1,0 +1,53 @@
+package com.ford.trainings.Shakinah;
+
+import static org.junit.Assert.*;
+
+import java.util.Scanner;
+
+import org.junit.Test;
+
+public class TicketSystemTest {
+@Test
+public void testTicket() throws Exception {
+	int option;
+    TicketSystem TicketSystemObj = new TicketSystem();
+    do {
+    	System.out.println("Please enter 1 to create new ticket");
+        System.out.println("2.Exit");
+        System.out.println("3.Approve");
+        System.out.println("4.Cancel");
+        System.out.println("5.Close");
+        Scanner choice = new Scanner(System.in);
+        option=choice.nextInt();
+    	switch (option){
+                                    case 1: 
+                                    TicketSystemObj.Newticket();
+                                    break;
+
+                                    
+                                    case 2: 
+                                    break;
+
+
+                                    case 3: 
+                                    TicketSystemObj.Approveticket();
+                                    /*Scanner option = new Scanner(System.in);
+                                    System.out.println("Please enter 5 to close the ticket");
+                                    option = input.nextInt();
+                                    
+                                    if(option==5)*/
+                                break;
+                                    
+                                    case 4: 
+                                    TicketSystemObj.Cancelticket();
+                                    break;
+
+                                    case 5: 
+                                    TicketSystemObj.Exitticket();
+                                    break;
+                    }
+    	
+    }while(option!=6);
+  }	
+}
+
