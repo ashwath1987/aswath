@@ -1,0 +1,102 @@
+1. Write a program to find odd or even number using IF/ ElSE
+
+import java.util.Scanner;
+
+public class OddorEven()
+{
+	public static void main()
+
+	{
+		Scanner x= new Scanner(System.in);
+
+		System.out.println("Please enter a no.:");
+		
+		int number= x.nextLine();
+	
+
+			if (number%2==0)
+				System.out.println("The no. is even");
+			else
+				System.out.println("The no. is odd");
+
+	}
+}
+
+
+2. Write a program to find day of the week, using SWITCH.
+
+
+import java.util.Scanner;
+
+public class Day()
+{
+	public static void main()
+	{
+		Scanner x= new Scanner(System.in);
+
+		System.out.println("Please enter a no.from 1 to 7:");
+		
+		int number= x.nextLine();
+	
+		
+			switch (number)
+			{
+				case 1: System.out.println("The day is Monday");
+				break;	
+				
+				case 2: System.out.println("The day is Tuesday");
+				break;
+
+				case 3: System.out.println("The day is Wednesday");
+				break;
+
+				case 4: System.out.println("The day is Thursday");
+				break;
+
+				case 5: System.out.println("The day is Friday");
+				break;
+
+				case 6: System.out.println("The day is Saturday");
+				break;
+
+				case 7: System.out.println("The day is Sunday");
+				break;
+			}
+	}
+}
+
+
+3. Write a program to print A to Z in lines using FOR. (Hint: Iterate from 65 to 90 and typecast to char and print it)
+
+public class Alphabets()
+{
+	public static void main()
+	{
+		int i=65;
+		char c;
+		
+		for(i=65;i<=90;i++)
+		{
+			c=(char)i;
+
+			System.out.println(c);
+		}
+	}
+}
+
+
+4. Write a program to print 1 to 100 in lines using WHILE.
+
+public class Numbers()
+{
+	public static void main()
+	{
+		int i=1;
+		
+		while (i<=100)
+		{
+			System.out.println(i);
+			i++;
+		}
+	}
+}
