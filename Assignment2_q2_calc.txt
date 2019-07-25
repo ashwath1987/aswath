@@ -1,0 +1,75 @@
+package Calc;
+
+public class CalcClassTest {
+
+public void calculate(int n1, int n2){
+    int sum = n1+n2;
+    System.out.println("Sum of 2 nos" +sum);
+    }
+    public void calculate(float n1, float n2){
+        float diff = n1-n2;
+        System.out.println(" Difference between 2 nos" +diff);
+    }
+        public void calculate(long n1,long n2){
+        long product = n1*n2;
+        System.out.println("Product of 2 nos" +product);
+    }
+    public void calculate(double n1,double n2){
+        double div = n1/n2;
+        System.out.println("Division of 2 nos" +div);
+    }
+    public void calculate(float n1,double n2){
+        double mod = n1%n2;
+        System.out.println("Division of 2 nos" +mod);
+    }
+}
+
+package Calc;
+
+import java.util.Scanner;
+
+public class CalcClass {
+    public static void main(String[] args) {
+        CalcClassTest c = new CalcClassTest();
+        System.out.println("Calculator - Choose the Function \n");
+        System.out.println("1. Addition \n");
+        System.out.println("2. Subtraction \n");
+        System.out.println("3. Multiplication \n");
+        System.out.println("4. Division \n");
+        System.out.println("5. Modulus \n");
+        Scanner sc = new Scanner(System.in);
+        int n= sc.nextInt();
+
+        switch (n)
+        {
+            case 1:
+                System.out.println("Please enter Number 1 : ");
+                int n1 = sc.nextInt();
+                System.out.println("Please enter Number 2 : ");
+                int n2 = sc.nextInt();
+                c.calculate(n1, n2);
+            break;
+            case 2: System.out.println("Please enter Number 1 : ");
+                float n3 = sc.nextInt();
+                System.out.println("Please enter Number 2 : ");
+                float n4 = sc.nextInt();
+                c.calculate(n3,n4);break;
+            case 3: System.out.println("Please enter Number 1 : ");
+                long n5 = sc.nextInt();
+                System.out.println("Please enter Number 2 : ");
+                long n6 = sc.nextInt();
+                c.calculate(n5,n6);break;
+            case 4: System.out.println("Please enter Number 1 : ");
+                double n7 = sc.nextInt();
+                System.out.println("Please enter Number 2 : ");
+                double n8 = sc.nextInt();
+                c.calculate(n7,n8);break;
+            case 5:System.out.println("Please enter Number 1 : ");
+                float n9 = sc.nextInt();
+                System.out.println("Please enter Number 2 : ");
+                double n10 = sc.nextInt();
+                c.calculate(n9,n10);break;
+            default: System.out.println("Bad choice");break;
+        }
+    }
+}
