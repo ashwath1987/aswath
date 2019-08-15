@@ -1,0 +1,15 @@
+ static boolean Lucky(int n) 
+    {
+boolean array[]=new boolean[10]; 
+        for (int i = 0; i < 10; i++) 
+            array[i] = false;
+ while (n > 0) 
+        { 
+ int digit = n % 10;
+ if (array[digit]) 
+            return false;
+ array[digit] = true;  
+n = n / 10; 
+        } 
+        return true; 
+    } 
