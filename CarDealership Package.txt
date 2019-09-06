@@ -1,0 +1,38 @@
+package cardealership;
+
+public class Employee {
+		private String name;
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public void handleCustomer(Customer c1,Vehicle v1, boolean finance) {
+			
+			if(finance) {
+				double loanAmount=v1.getPrice() - c1.getCashOnHand();
+				this.processLoan(c1,loanAmount);
+			}else if (c1.getCashOnHand()>=v1.getPrice()) {
+				
+				processTransaction(c1,v1);
+			}else {
+				System.out.println("you dnt have sufficient privilege for processing");
+			}
+			
+		}
+		
+		private void processTransaction(Customer c1, Vehicle v1) {
+			System.out.println(c1.getName()+"  purchased "+v1.getModel());
+			
+		}
+
+		public void processLoan(Customer c1, double loanAmout) {
+			//
+			System.out.println("Loan request is registered and it is in Progress");
+		}
+
+}
